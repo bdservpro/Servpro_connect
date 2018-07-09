@@ -1,0 +1,299 @@
+﻿<%@ Page EnableEventValidation="false" Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" ValidateRequest="false" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajx" %>
+
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <script type="text/javascript">
+        function ClosepnlDcoket() {
+            document.getElementById("<%=pnlDcoket.ClientID%>").style.display = "none";
+            return false;
+        }
+    </script>
+
+    <style>
+        .label {
+            font-weight: bold !important;
+        }
+    </style>
+
+    <script>
+        function BasicValidation4SaveX() {
+
+            var txtreason = document.getElementById("<%=txtreason.ClientID%>");
+
+
+
+
+            if (txtreason.value.trim() == "") {
+                alert("Please Enter Reason");
+                txtreason.focus();
+                return false;
+            }
+        }
+    </script>
+
+    <script type="text/javascript" language="javascript">
+        Sys.WebForms.PageRequestManager.getInstance().add_endRequest(EndRequestHandler);
+        function EndRequestHandler(sender, args) {
+            if (args.get_error() != undefined) {
+                args.set_errorHandled(true);
+            }
+        }
+    </script>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+
+    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+        <ContentTemplate>
+            <asp:Panel ID="pnldetails" runat="server">
+                <div class="pageData">
+                    <asp:UpdateProgress ID="UpdateProgress1" runat="server" AssociatedUpdatePanelID="UpdatePanel1">
+                        <ProgressTemplate>
+                            <div id="blocker" class="progress">
+                                <div id="blockerContain">
+                                    <img alt="" src="Images/slider_loading.gif" />
+                                    Processing Data...
+                                </div>
+                            </div>
+                        </ProgressTemplate>
+                    </asp:UpdateProgress>
+
+                </div>
+                <div class="clr">
+                </div>
+                <div class="pageField">
+                    <div>
+                        <h2>Status:</h2>
+                        <asp:RadioButtonList ID="rdoStatus" runat="server" OnSelectedIndexChanged="rdoStatus_SelectedIndexChanged" CssClass="label" AutoPostBack="true" RepeatDirection="Horizontal" CellSpacing="20" Style="margin-top: -3.4%; margin-left: 6%; text-decoration-color: #B41B63; color: #B41B63; text">
+                            <asp:ListItem Selected="True">Pending</asp:ListItem>
+                            <asp:ListItem>Approved</asp:ListItem>
+                            <asp:ListItem>Rejected</asp:ListItem>
+                        </asp:RadioButtonList>
+
+                    </div>
+                    <div style="text-align: center">
+                        <h2>Punch Details</h2>
+                        <hr />
+                    </div>
+                    <div class="clr">
+                    </div>
+                    <div style="margin-left: 8%;">
+                        <div style="margin-left: -10%; margin-top: 2.1%">
+                            <strong>Employee Name :<asp:TextBox ID="txtEmpName" runat="server" Width="210px" Visible="false"></asp:TextBox>
+                                <asp:DropDownList ID="DropDownList1" AppendDataBoundItems="false" runat="server" Height="24px" Width="214px">
+                                    <asp:ListItem Value="0">All</asp:ListItem>
+                                </asp:DropDownList>
+                            </strong>
+
+                        </div>
+                        <br />
+                        <div class="clr">
+                        </div>
+                        <div style="margin-top: -4.1%; margin-left: 25%;">
+
+                            <strong>From Date :
+                                <asp:TextBox ID="txtFromDate" runat="server" Width="180px" PlaceHolder="Today"></asp:TextBox>
+                                <ajx:CalendarExtender ID="txtFromDate_CalendarExtender" runat="server" TargetControlID="txtFromDate" PopupButtonID="txtFromDate" Format="dd-MM-yyyy">
+                                </ajx:CalendarExtender>
+                                <br />
+                                <asp:Label ID="Label2" runat="server" EnableViewState="true" Style="color: red"></asp:Label>
+                            </strong>
+                        </div>
+                        <div class="clr">
+                        </div>
+                        <div style="margin-left: 53.4%; margin-top: -2.8%;">
+
+
+                            <strong>To Date :<asp:TextBox ID="txttoDate" runat="server" Width="180px" PlaceHolder="Today"></asp:TextBox>
+
+                                <ajx:CalendarExtender ID="txttoDate_CalendarExtender" runat="server" TargetControlID="txttoDate" PopupButtonID="txttoDate" Format="dd-MM-yyyy">
+                                </ajx:CalendarExtender>
+
+                            </strong>
+                        </div>
+                        <div class="clr">
+                        </div>
+                        <div style="margin-left: 81%; margin-top: -3%;">
+                            <%--    <asp:Button ID="btnSubmit" runat="server" Font-Bold="True" CssClass="btn"  Text="Search" Style="ima"  OnClick="btnSubmit_Click" />--%>
+                            <asp:ImageButton ID="btnSubmit" runat="server" src="Images/search_bttn.png" OnClick="btnSubmit_Click"></asp:ImageButton>
+                        </div>
+
+                    </div>
+
+
+                    <%--  <div class="field field250"  style="margin-top: -0.5%">
+                     <strong class="strong80">Lead Name: </strong>
+                    <asp:TextBox ID="txtLeadName" Placeholder="Lead Name" runat="server" Width="60%" CssClass="txt localSearchTxt"></asp:TextBox>
+                    <strong class="strong80">Proposed City: </strong>
+                    <asp:TextBox ID="txtProposedCity" Placeholder="Proposed City" runat="server" Width="60%" CssClass="txt localSearchTxt"></asp:TextBox>
+                
+   
+                    <strong class="strong80">Lead Type: </strong>
+                    <asp:TextBox ID="txtLeadTypeS" Placeholder="Lead Type" runat="server" Width="60%" CssClass="txt localSearchTxt"></asp:TextBox>
+                    <asp:Button ID="btnShow" runat="server" Text="Show" CssClass="MyButton blueButton" OnClick="btnShow_Click" />
+
+                </div>--%>
+                    <div class="clr">
+                    </div>
+
+
+
+                    <asp:Panel ID="Panel1" runat="server">
+                        <asp:GridView ID="gridEmployee" runat="server" AllowPaging="True" AutoGenerateColumns="False" CssClass="PagingGrid" EnableViewState="true" OnPageIndexChanging="gridEmployee_PageIndexChanging"
+                            PageSize="10" EmptyDataText="<center> No Records Found</center>" Width="1055px" OnRowDataBound="gridEmployee_RowDataBound">
+                            <PagerStyle CssClass="GridPageFooter" HorizontalAlign="Center" />
+                            <PagerSettings Mode="NumericFirstLast" PageButtonCount="10" FirstPageText="First" LastPageText="Last" />
+                            <HeaderStyle BackColor="#A4A2A2" ForeColor="White" CssClass="dataTableHeader" />
+                            <Columns>
+                                <asp:TemplateField HeaderText="Id" Visible="false">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblId" runat="server" Text='<%# Eval("Id")%>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="Code">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblEmployeeCode" runat="server" Text='<%# Eval("tktNo")%>'></asp:Label>
+                                    </ItemTemplate>
+                                    <ItemStyle HorizontalAlign="Center" />
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="Name" Visible="true">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblEmployeeName" runat="server" Text='<%# Eval("employeeName")%>'></asp:Label>
+                                    </ItemTemplate>
+                                    <ItemStyle HorizontalAlign="Center" />
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="Type ">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblflag" runat="server" Text='<%# Eval("flag")%>'></asp:Label>
+                                    </ItemTemplate>
+                                    <ItemStyle HorizontalAlign="Center" />
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="Date">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lbldate" runat="server" Text='<%# Eval("Date")%>'></asp:Label>
+                                    </ItemTemplate>
+                                    <ItemStyle HorizontalAlign="Center" />
+                                </asp:TemplateField>
+                                <asp:TemplateField HeaderText="Time">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lbltime" runat="server" Text='<%# Eval("Time")%>'></asp:Label>
+                                    </ItemTemplate>
+                                    <ItemStyle HorizontalAlign="Center" />
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="Image">
+                                    <ItemTemplate>
+                                        <asp:Image ID="lblImage" runat="server" />
+                                        <%--  <asp:Image  ID="ImageButton1" runat="server"  ToolTip="Click to Zoom Image."  Width="150px" Height="100px"  ImageUrl='<%# "Handler.ashx?Id="+ Eval("Id").ToString() %>'  Style="cursor: pointer" />--%>
+                                        <img src='<%# (Eval("Image") != System.DBNull.Value ? "data:image/jpg;base64," + Convert.ToBase64String((byte[])Eval("Image")) : "NULL") %>' onerror="this.onload = null; this.src='Images/imagenotfound.jpg ';" id="Image1" height="100px" width="100px" />
+
+                                    </ItemTemplate>
+                                    <ItemStyle HorizontalAlign="Center" />
+                                </asp:TemplateField>
+                                <asp:TemplateField HeaderText="Location">
+                                    <ItemTemplate>
+                                        <asp:ImageButton ID="imgLocation" OnClick="imgLocation_Click" ImageUrl="~/Images/in_time.png" runat="server" />
+                                        <br />
+                                        <asp:Label ID="lblLattitude" runat="server" Text='<%# Eval("lattitude")%>'></asp:Label>-<asp:Label ID="lblLongitude" runat="server" Text='<%# Eval("longitude")%>'></asp:Label>
+                                    </ItemTemplate>
+                                    <ItemStyle HorizontalAlign="Center" />
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="Lattitude" Visible="false">
+                                    <ItemTemplate>
+                                        <%--<asp:Label ID="lblLattitude" runat="server" Text='<%# Eval("lattitude")%>'></asp:Label>--%>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="Longitude" Visible="false">
+                                    <ItemTemplate>
+                                        <%--<asp:Label ID="lblLongitude" runat="server" Text='<%# Eval("longitude")%>'></asp:Label>--%>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="Reason">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblReason" runat="server" Text='<%# Eval("RejectReason")%>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="Status">
+                                    <ItemTemplate>
+                                        <asp:Label ID="lblStatus" runat="server" Text='<%# Eval("Status")%>'></asp:Label>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+
+
+
+                                <asp:TemplateField HeaderText="">
+                                    <ItemTemplate>
+                                        <asp:ImageButton ID="imgWeek_4" OnClick="imgWeek_4_Click" ImageUrl="~/Images/approve_bttn.png" runat="server" />
+                                    </ItemTemplate>
+                                    <ItemStyle HorizontalAlign="Center" />
+                                </asp:TemplateField>
+
+                                <asp:TemplateField HeaderText="">
+                                    <ItemTemplate>
+                                        <asp:ImageButton ID="imgWeek_5" OnClick="imgWeek_5_Click" ImageUrl="~/Images/reject_bttn.png" runat="server" />
+
+                                    </ItemTemplate>
+                                    <ItemStyle HorizontalAlign="Center" />
+                                </asp:TemplateField>
+
+
+                            </Columns>
+                        </asp:GridView>
+                        <asp:HiddenField ID="HdCounter" runat="server" />
+
+
+                    </asp:Panel>
+                    <%--<asp:Panel ID="pnlDcoket" runat="server" Style="display: none;">
+                    <div>
+                        <asp:Button ID="btnOk" runat="server" />
+                    </div>
+                </asp:Panel>--%>
+                </div>
+
+                <div class="clr">
+                </div>
+
+                <asp:Panel ID="pnlDcoket" runat="server" Style="display: none; background-image: url(Images/remark_main_bg.png);">
+
+
+                    <div class="MyDiv drop-shadow raised popup" style="width: 20%; height: 131px; margin-top: 7%;">
+
+                        <div style="margin-top: 5%" class="field field300">
+                            <strong class="strong150" style="vertical-align: text-bottom; height: 42px">Reason:</strong>
+                            <asp:TextBox ID="txtreason" runat="server" TextMode="MultiLine" Height="60px" Width="168px" Style="margin-left: -32%" CssClass="txt210"></asp:TextBox>
+
+                        </div>
+
+
+                        <div style="margin-top: 5%">
+
+                            <asp:Button ID="btnUpdate" runat="server" Text="Update" OnClick="lnkUpdate_Click" CssClass="MyButton blueButton" />
+
+                            <asp:Button ID="btnClose" runat="server" OnClientClick="return ClosepnlDcoket()" ToolTip="Click to Close panel."
+                                Text="Close" CssClass="MyButton PopUp redButton" />
+                        </div>
+                    </div>
+
+                    <div class="BlockerDiv">
+                    </div>
+                </asp:Panel>
+            </asp:Panel>
+
+
+            <div class="clr">
+            </div>
+
+
+        </ContentTemplate>
+    </asp:UpdatePanel>
+</asp:Content>
+

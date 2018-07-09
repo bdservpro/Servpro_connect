@@ -1,0 +1,14 @@
+C:\Users\bhagwat.dewde\Documents\Visual Studio 2012\Projects\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+C:\Users\bhagwat.dewde\Documents\Visual Studio 2012\Projects\DataLayer\bin\Debug\DataLayer.dll
+C:\Users\bhagwat.dewde\Documents\Visual Studio 2012\Projects\DataLayer\bin\Debug\DataLayer.pdb
+C:\Users\bhagwat.dewde\Documents\Visual Studio 2012\Projects\DataLayer\obj\Debug\DataLayer.dll
+C:\Users\bhagwat.dewde\Documents\Visual Studio 2012\Projects\DataLayer\obj\Debug\DataLayer.pdb
+D:\bhagwat_planning\dsadsa\DataLayer\bin\Debug\DataLayer.dll
+D:\bhagwat_planning\dsadsa\DataLayer\bin\Debug\DataLayer.pdb
+D:\bhagwat_planning\dsadsa\DataLayer\bin\Debug\Newtonsoft.Json.dll
+D:\bhagwat_planning\dsadsa\DataLayer\bin\Debug\RestSharp.dll
+D:\bhagwat_planning\dsadsa\DataLayer\bin\Debug\Newtonsoft.Json.xml
+D:\bhagwat_planning\dsadsa\DataLayer\bin\Debug\RestSharp.xml
+D:\bhagwat_planning\dsadsa\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+D:\bhagwat_planning\dsadsa\DataLayer\obj\Debug\DataLayer.dll
+D:\bhagwat_planning\dsadsa\DataLayer\obj\Debug\DataLayer.pdb

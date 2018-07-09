@@ -1,0 +1,45 @@
+﻿
+
+  .box1 {
+  /*background: #ffd5ce;*/
+  height: 40px;
+  text-indent: 10px;
+  width: 30%;
+  /*margin-bottom: 2px;*/
+  color: #3B424D;
+  font-size: 16px;
+  font-weight: 400;
+  /*margin-bottom:20%*/
+}
+
+.border1 {
+  /*-webkit-border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  -ms-border-radius: 5px 5px 0 0;
+  -o-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;*/
+  border-bottom:2px solid lightgrey;
+  margin:0px;
+  background-image: url('../images/user_icon.png');
+  background-repeat: no-repeat;
+  background-color:white;
+  background-size: 12%;
+  background-position: 93% 50%;
+   box-shadow: #3b3f4d;
+}
+
+.border2 {
+  /*-webkit-border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  -ms-border-radius: 5px 5px 0 0;
+  -o-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;*/
+  border-bottom:2px solid lightgrey;
+  margin:0px;
+  background-image: url('../images/password_icon.png');
+  background-repeat: no-repeat;
+  background-color:white;
+  background-size: 12%;
+  background-position: 93% 50%;
+   box-shadow: #3b3f4d;
+}

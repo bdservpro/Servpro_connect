@@ -1,0 +1,115 @@
+﻿ 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover
+{
+    background-color: #111;
+}
+
+.footerWrapper
+    {
+        width: 99.9%;
+        margin-top: -19px;
+        text-align: center;
+    }
+
+.footer
+    {
+        line-height: normal;
+        padding: 5px 0 10px 10px;
+        text-align: left;
+        width: 80%;
+        float: left;
+    }
+
+.footerWrapper
+{
+    background:#ffb84d; /*#eceadf;*/
+    bottom: 0;
+    position: fixed;
+    text-align: right;
+    width: 65.4%; 
+    height: 40px; /*margin-top: -30px;*/
+    opacity: 0.9;
+    filter: alpha(opacity=70);
+    margin-left: -18.3%;
+     
+   
+}
+.footer
+{
+    line-height: 42px;
+    font-size: 88%;
+    text-align: right;
+    padding-left: 20px;
+    color: black;
+    float: left;
+}
+
+.marshallPageWrapper
+    {
+        margin-bottom: -19px;
+       
+    }
+.headerTopMenuWrapper
+    {
+        min-height: 90px;
+    }
+
+.pageContentWrapper
+    {
+        padding: 0px 1% 10px;
+        padding-top: 0 !important;
+    }
+.Content
+{
+    height: auto;
+    float: none;
+    overflow: visible;
+}
+   
+   .box1 {
+  /*background: #ffd5ce;*/
+  height: 40px;
+  text-indent: 10px;
+  width: 90%;
+  margin-bottom: 2px;
+  color: #3B424D;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.border1 {
+  -webkit-border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
+  -ms-border-radius: 5px 5px 0 0;
+  -o-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
+  border-bottom:2px solid lightgrey;
+  margin:0px;
+  background-image: url('../images/username.png');
+  background-repeat: no-repeat;
+  background-color:white;
+  background-size: 12%;
+  background-position: 93% 50%;
+   box-shadow: 10px 10px 5px rgba(0, 174, 156, 0.43);
+}

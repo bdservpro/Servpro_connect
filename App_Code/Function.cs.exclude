@@ -1,0 +1,61 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Web;
+
+
+/// <summary>
+/// Summary description for Function
+/// </summary>
+public class Function
+{
+	public Function()
+	{
+	
+	}
+
+    public int UpdateStatus(int id, string Status)
+    {
+      //  DataTable dtQuestions = null;
+        DBHelper objConnection = new DBHelper();
+        string tselect = "";
+
+        
+            SqlParameter[] sqlparam = new SqlParameter[2];
+            sqlparam[0] = new SqlParameter("@id", id);
+            sqlparam[1] = new SqlParameter("@Status", Status);
+
+            int dtQuestions = objConnection.Save("ProcUpdateStatus", sqlparam, tselect);
+            return dtQuestions;
+        
+       
+    }
+
+    public int InsertDetails(int id,String LogType, string date, String EmployeeIdA, String Lattitude, String Longitude)
+    {
+        //  DataTable dtQuestions = null;
+        DBHelper objConnection = new DBHelper();
+        string tselect = "";
+
+
+        SqlParameter[] sqlparam = new SqlParameter[6];
+        sqlparam[0] = new SqlParameter("@LogType", LogType);
+        sqlparam[1] = new SqlParameter("@EmployeeIdA", EmployeeIdA);
+    
+        sqlparam[2] = new SqlParameter("@date", date);
+      
+        sqlparam[3] = new SqlParameter("@LatitudeA", Lattitude);
+        sqlparam[4] = new SqlParameter("@LongitudeA", Longitude);
+        sqlparam[5] = new SqlParameter("@id", id);
+
+
+
+        int dtQuestions = objConnection.Save("Insert_PunchTime_ForHR", sqlparam, tselect);
+        return dtQuestions;
+
+
+    }
+
+}

@@ -1,0 +1,102 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage"  %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajx" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+      <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="css/base.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/MyMaster.css" type="text/css" />
+    <link href="css/MyMasterStructure.css" rel="stylesheet" type="text/css" />
+   <%-- <link href="Script/jquery.mcdropdown.css" rel="stylesheet" />--%>
+    <script src="Script/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+
+        <ajx:ToolkitScriptManager ID="ToolkitScriptManager1" AsyncPostBackTimeout="180" EnablePartialRendering="true"  runat="server" />
+
+        <!-- page wrapper -->
+        <div class="marshallPageWrapper">
+
+            <div class="headerTopMenuWrapper">
+
+                <!-- header wrapper -->
+                <div style="width: 90%; margin-left: 5%;">
+                    <div class="headerWrapper"   style="background-image:url(Images/top_bnnr.png);">
+
+
+                        <a href="" title=""
+                            target="_blank">
+                            <img src="" id="img2" runat="server" visible="true" alt="" title="" /></a>
+                        <div style="margin-left: 39%; margin-top: -6.3%; margin-bottom: -2%;">
+                            <%--<h2 style="font-family: serif; color: #D81E05;">Mahindra First Choice</h2>--%>
+                        </div>
+
+                        <div class="loginDetails">
+                            <div class="DivUserNameNew">
+                                <asp:Label ID="Label7" Visible="true" runat="server" Text="Welcome," Font-Bold="true" ForeColor="#FFFFFF"></asp:Label>
+                              
+                               <asp:Label ID="lblUserName" runat="server" Font-Bold="true" Text="" ForeColor="#FFFFFF"> </asp:Label>
+                                &nbsp; 
+                            </div>
+                            <div class="signOut">
+                                <asp:Label ID="lblName" Visible="false" runat="server" Text="Label"></asp:Label>
+                                <asp:Button ID="btnLogout" runat="server" Text="Logout" CausesValidation="false" ToolTip="Click To Logout" CssClass="MyButton PopUp redButton" OnClick="btnLogout_Click" />
+                            </div>
+                        </div>
+
+                        <div class="clr"></div>
+                    </div>
+                </div>
+                <!-- header wrapper -->
+
+                <!-- top menu wrapper -->
+                <div style=" width: 90%; margin-left: 4.8%;">
+                                       
+                    <div class="menu">
+                        <asp:Panel ID="Panel1" runat="server" >
+                        </asp:Panel>
+                    </div>
+                </div>
+                <!-- top menu wrapper -->
+            </div>
+
+            <!-- page content wrapper -->
+            <div class="pageContentWrapper" style="padding-top: 185px; height: 800px; overflow: auto; width:84%;">
+                <div class="Content">
+
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+
+                </div>
+                <div class="clr"></div>
+            </div>
+            <!-- page content wrapper -->
+
+            <!-- footer wrapper -->
+            <div style="width: 90%; margin-left: 5%;">
+                <div class="footerWrapper">
+                    <div class="footer">
+                        <div style="float: left"></div>
+                        <asp:Label ID="Label12" runat="server" Text="Copyright © 2016 ServPRO Technologies Pvt. Ltd. All Rights Reserved. www.servpro.in" ForeColor="#FFFFFF"></asp:Label>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+            </div>
+            <!-- footer wrapper -->
+
+
+        </div>
+        <!-- page wrapper -->
+
+
+
+    </form>
+
+</body>
+</html>

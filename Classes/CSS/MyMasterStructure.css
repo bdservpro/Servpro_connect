@@ -1,0 +1,736 @@
+﻿*
+{
+    margin: 0;
+    padding: 0;
+}
+html, body
+{
+    height: 100%;
+}
+body
+{
+    font-family: "PT Sans", arial, sans-serif;/* "Arial" , Verdana, Times New Roman;*/
+    font-size: 14px;
+    color:#333;   /*  background: #D6D6D6;*/ /*background-image: url("../images/Home/MarshallsMasterBody.gif"); overflow:hidden;*/
+   background:#838F9B;   /*#666363; /*gray;  url("../images/Home/MY-Fav.png") repeat scroll 0 0 transparent; */
+}
+.clr
+{
+    clear: both;
+}
+a
+{
+    text-decoration: none;
+}
+a:hover
+{
+    text-decoration: none;
+}
+.img
+{
+    border: 0;
+}
+
+.imgDispaly
+{
+   width:100px;
+   height:80px
+}
+
+.marshallPageWrapper
+{
+    /*background:  url("../images/Home/MY-Fav.png")  repeat scroll 0 0 transparent;*/
+    min-height: 100%;
+    height: 100%;
+    margin-bottom: -30px;
+}
+
+.headerTopMenuWrapper
+{
+    position: fixed;
+    min-height: 110px;
+    z-index: 1000;
+    width: 100%;
+}
+
+
+    .headerWrapper {
+         border: 0px solid red;
+        padding: 9% 1% 3.75% 3.2%;
+       /*url("../images/Home/MarshallsMasterBody.gif"); /*url("../images/Home/MY-Fav.png");*/
+        /*background:url("../images/servpro_logo.png");*/
+        /*opacity: 0;*/
+    }
+
+        .headerWrapper .siteLinks {
+            float: left;
+            width: 75%;
+        }
+
+    .marshallsLogo {
+        /*border: 0 solid green;     padding-top:5px;     margin-left:3.5%;*/
+    }
+
+        .marshallsLogo .logo {
+            max-height: 28px;
+        }
+
+        .marshallsLogo a {
+            /*background: url("../images/Home/MarshallsNewLogo200.png") no-repeat scroll center center / 100% auto transparent;     border: 0 none;     display: inline-block;     height: 30px;     width: 130px;*/
+        }
+
+    .logo a:hover {
+    }
+
+
+.loginDetails
+{
+    border: 0 solid blue;
+    float: right;
+    margin: 0 !important;
+    /*max-width: 28%;*/ /*width: 28%;*/
+}
+.loginDetails .signOut span
+{
+    white-space: nowrap;
+}
+.standardMenuWrapper
+{
+    border: 0 solid blue;
+    float: right;
+    font-size: 90%;
+    width: auto;
+}
+a.toggleStandardMenu
+{
+    background: url("../images/standardMenuHover_white.png") no-repeat scroll center center transparent;
+    display: none;
+    height: 21px;
+    overflow: hidden;
+    text-indent: -200px;
+    width: 21px;
+    color: #fff;
+}
+.standardMenu
+{
+    margin: 0;
+    padding: 0;
+}
+.topMenuWrapper
+{
+    /*border: 2px solid rgb(94, 94, 94);*/
+  
+    background: none repeat scroll 0 0 #1A4A7D; /*#505050;*/
+    padding: 0 3% 0 2.5%;
+      
+    background-color: #131111; /*  #1A4A7D; #333;*/
+}
+.pageContentWrapper
+{
+  /*  border: 0 solid grey;*/
+    margin: 0 auto;
+    max-width: 84%; /* 960px;*/
+    padding: 125px 3% 60px; /*position: relative;*/ /*overflow: auto;*/
+     background: #FDFDFD;
+}
+
+.pageContentWrapper1
+{
+  /*  border: 0 solid grey;*/
+    /*margin: 0 auto;*/
+    max-width: 100%; /* 960px;*/
+    padding: 125px 8% 60px; /*position: relative;*/ /*overflow: auto;*/
+     background: #FDFDFD;
+}
+
+.footerWrapper
+{
+    background: #100F0F;
+    bottom: 0;
+    position: fixed;
+    text-align: right;
+    width: 90%;
+    height: 40px;
+    /* margin-top: -30px; */
+    opacity: 1.9;
+    filter: alpha(opacity=70);
+    margin-left: -23%;
+    margin-left: 0%;
+   
+}
+.footer
+{
+    line-height: 42px;
+    font-size: 88%;
+    text-align: right;
+    padding-left: 20px;
+    color: black;
+    float: left;
+}
+
+siteWrapper
+{
+    margin: 10px auto;
+}
+.siteWrapper li
+{
+    display: inline-block;
+    text-align: center;
+    margin: 0 0.8%;
+    max-width: 40%; /*min-width: 10%;*/
+}
+.siteWrapper img
+{
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 15px 50px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    max-height: 45px;
+    min-height: 45px;
+    max-width: 100%;
+    border: 0 none;
+}
+
+
+.leftPart{
+float: left;
+    width: 49%;
+	margin-right:1%;
+}
+.rightPart
+{
+    
+    float: left;
+    width: 49%;
+    margin-right:1%;
+}
+
+  .leftPartPage{
+
+    width: 32%;
+	margin-right:1%;
+	   
+}
+
+.rightPartPage
+{
+     float: right;
+    
+      width: 32%;
+    margin-right: -3%;
+    
+      margin-top: -42.0%;
+}
+.centerPage
+{
+     float: right;
+    width: 31%;
+    
+      margin-right: 33%;
+    
+      margin-top: -40.5%;
+}
+
+@media only screen and (max-width : 768px)
+{
+    .headerTopMenuWrapper
+    {
+        position: static;
+    }
+    .pageContentWrapper
+    {
+        padding-top: 15px !important;
+    }
+
+     .pageContentWrapper1
+    {
+        padding-top: 15px !important;
+    }
+    .headerWrapper
+    {
+        padding: 1em 1em 0.5em 1.2em;
+    }
+    .headerWrapper .siteLinks
+    {
+        float: left;
+        width: 72%;
+    }
+    .marshallsLogo
+    {
+        width: 35%;
+    }
+    .loginDetails
+    {
+        margin: 0.8em 0 0 2em;
+        width: auto;
+    }
+    .siteWrapper li
+    {
+        margin: 0 0.3%;
+    }
+    .siteWrapper img
+    {
+        max-height: 30px;
+        min-height: 30px;
+    }
+
+    .standardMenuWrapper
+    {
+        font-size: 90%;
+        padding: 1em;
+        width: auto;
+        position: relative;
+    }
+    .standardMenuHolder
+    {
+        background: #fff;
+        position: absolute;
+        right: 5px;
+        width: 180px;
+        z-index: 10;
+        margin-top: 15px;
+        box-shadow: 0px 3px 6px #888888;
+        -webkit-box-shadow: 0px 3px 6px #888888;
+        display: none;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        bottom: 40px;
+    }
+    .standardMenu
+    {
+        padding: 10px;
+        position: relative;
+        z-index: 11;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        background: #fff;
+    }
+    .standardMenu li.footerWrapper
+    {
+        background: none;
+        margin: 2px auto;
+        width: 32%;
+    }
+    a.toggleStandardM.footerWrapperenu
+    {
+        display: block;
+        color: #6d6d6d;
+    }
+    a.toggleStandardMenu:hover
+    {
+        background:gray;
+        color: #000;
+    }
+
+    .standardMenuWrapper .arrow
+    {
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        background: none repeat scroll 0 0 #FFFFFF;
+        box-shadow: 0 3px 6px #888888;
+        -webkit-box-shadow: 0 3px 6px #888888;
+        height: 15px;
+        position: absolute;
+        right: 10px;
+        bottom: -4px; /*        left: 10px;*/
+        width: 15px;
+        z-index: 9;
+        display: block;
+    }
+
+    .topMenuContainer
+    {
+        width: auto;
+    }
+    .nav a
+    {
+        font-size: 0.96em;
+        padding: 10px 5px;
+    }
+
+    .nav > li.hover > ul, .nav > li:hover > .child
+    {
+        display: none;
+    }
+    .dashboard .mncHolder
+    {
+        float: none;
+        display: block;
+        width: 100%;
+    }
+
+    .dashboard .myFavCalendar
+    {
+        float: none;
+        display: block;
+        margin-top: 20px;
+        width: 100%;
+    }
+    .dashboard .otherBox
+    {
+        float: none;
+        display: block;
+        width: 100%;
+    }
+
+    a.toggleStandardMenu
+    {
+        display: block;
+        text-indent: 5000px;
+        white-space: nowrap;
+    }
+    
+    .leftPart{
+
+    width: 49%;
+	margin-right:1%;
+}
+.rightPart
+{
+      float: left;
+    width: 49%;
+    margin-right:1%;
+}
+
+
+}
+@media only screen and (max-width : 1024px)
+{
+
+}
+@media only screen and (min-width : 768px)
+{
+    .topMenuWrapper .nav
+    {
+        display: block !important;
+    }
+
+}
+@media only screen and (min-width : 769px)
+{
+    .standardMenuHolder, .topMenuWrapper .nav
+    {
+        display: block !important;
+    }
+    .standardMenuHolder .arrow
+    {
+        display: none;
+    }
+
+}
+@media only screen and (max-width : 769px)
+{
+    .standardMenuWrapper
+    {
+        position: absolute;
+        right: 0px;
+    }
+    .toggleStandardMenu
+    {
+        display: block;
+    }
+}
+@media only screen and (max-width : 700px)
+{
+    .headerTopMenuWrapper
+    {
+        min-height: 90px;
+    }
+    .headerWrapper .siteLinks
+    {
+        float: none;
+        width: 100%;
+    }
+    h1.pageHeading
+    {
+        margin-left: -0.5em;
+    }
+    .marshallPageWrapper
+    {
+        margin-bottom: -19px;
+       
+    }
+    .headerWrapper
+    {
+        padding: 0.5em;
+    }
+    .marshallsLogo
+    {
+        width: 85%;
+    }
+    .loginDetails
+    {
+        clear: both;
+        display: table;
+        float: none;
+        font-size: 80%;
+        margin: 0 auto;
+        padding: 0.4em 0 0.5em;
+        position: absolute;
+        right: 5px;
+        text-align: right;
+        top: 0;
+    }
+    .signOut img.UserIcon
+    {
+        max-height: 35px;
+    }
+
+    .loginDetails .DivUserNameNew
+    {
+        padding: 0;
+        width: 65%;
+        font-size: 80%;
+    }
+    .loginDetails span
+    {
+        display: inline;
+    }
+    .toggleMenu
+    {
+        background: url(../images/down.png) no-repeat 98% center;
+        display: block;
+        font-size: 1.0em;
+        font-weight: bold;
+        text-align: center;
+        padding: 7px 15px;
+    }
+    .topMenuContainer a.openMenu
+    {
+        background: url(../images/up.png) no-repeat 98% center;
+    }
+    .nav > li > a.expanded
+    {
+        background: url(../images/up.png) no-repeat 98% center #df2b2d;
+    }
+    .topMenuContainer .nav
+    {
+        display: none;
+    }
+    .nav > li
+    {
+        float: none;
+    }
+    .nav a
+    {
+        padding: 7px 0.35em;
+    }
+    .nav > li > a
+    {
+        background: url(../images/down.png) no-repeat 98% center;
+    }
+    .nav li .child
+    {
+        display: none;
+        position: relative;
+    }
+    .pageContentWrapper
+    {
+        padding: 0px 1% 10px;
+        padding-top: 0 !important;
+    }
+     .pageContentWrapper1
+    {
+        padding: 0px 1% 10px;
+        padding-top: 0 !important;
+    }
+
+    .pageContainer
+    {
+        padding: 20px 10px;
+    }
+    .quickGuideHolder
+    {
+        height: 30px;
+        text-align: right;
+        right: 32px;
+    }
+    .quickGuideButton
+    {
+        border-radius: 3px 3px 0 0;
+        box-shadow: 0 0 0;
+        height: 28px;
+    }
+    .quickGuideContent
+    {
+        position: relative;
+        right: 0;
+        text-align: left;
+        top: 10px;
+        width: 280px;
+    }
+    .quickGuideHolder .pointer
+    {
+        right: 15px;
+        top: -10px;
+    }
+    .closePage
+    {
+        right: -5px;
+    }
+    .footerWrapper
+    {
+        width: 99.9%;
+        margin-top: -19px;
+        text-align: center;
+    }
+    .footerNavigation a
+    {
+        padding: 0 6px;
+    }
+    .footerNavigation
+    {
+        margin-right: 0;
+    }
+    .footer
+    {
+        padding: 0px 0 5px 10px;
+        /*width: 80%;*/
+        text-align: left;
+    }
+
+
+
+
+
+
+}
+@media only screen and (max-width : 500px)
+{
+    .loginDetails
+    {
+        float: right;
+        position: static;
+    }
+    .siteWrapper img
+    {
+        max-height: 28px;
+        min-height: 28px;
+    }
+    .footer
+    {
+        float: right;
+        line-height: normal;
+        padding: 5px 10px;
+        text-align: left;
+        width: auto;
+    }
+    .footerNavigation
+    {
+        font-size: 0.6em;
+    }
+    .footerNavigation li
+    {
+        padding: 2px 0 4px;
+    }
+    .footerNavigation a
+    {
+        border: 0 none;
+        padding: 0 6px;
+    }
+    .footerNavigation li.followUsWrapper
+    {
+        display: none;
+    }
+    .standardMenuWrapper
+    {
+        position: absolute;
+        right: 0px;
+    }
+}
+
+@media only screen and (max-width : 600px)
+{
+    .footer
+    {
+        line-height: normal;
+        padding: 5px 0 10px 10px;
+        text-align: left;
+        width: 80%;
+        float: left;
+    }
+}
+
+
+.CompanyName {
+
+
+      text-shadow: 1px 1px 0 #850A08,       
+          2px 2px 0 #C54141,        
+          /* end of 2 level deep rgb(196, 30, 43) shadow */                  
+      3px 3px 0 #FFFFFF,                          
+          4px 4px 0 #815A09,                          
+          /*5px 5px 0 #F7F6F4,*/                      
+      6px 6px 0 #F7F3EF;
+
+   
+
+     /*text-shadow: 1px 1px 0 #BB8080,   
+         /*2px 2px 0 #C54141,*/ /* end of 2 level deep grey shadow */   
+   /*  3px 3px 0 #FFFDFD,  
+          4px 4px 0 #EDEDED,   
+         /*5px 5px 0 #444,*/   
+       /*  6px 6px 0 #C78341; */ 
+
+    
+    position: relative;
+       
+        /*margin-top: 0;*/
+        /*font-family: 'Lobster', helvetica, arial;*/
+     
+
+    font-family: arial;
+
+    font-size: 23px;
+
+    
+}
+
+
+
+ .RedLable
+{ border: solid 1px  #D86B0F;
+	/* -webkit-border-radius: 3px; */
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	background-color: #BA1762;
+   
+   
+	color: #FAF9F9;
+   font-family: Arial,Verdana  ,sans-serif ;
+    
+	font-size: 13px;
+     
+	font-weight: bold;
+     
+	          
+	padding:0.7em;
+      
+
+      -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+      
+
+               -moz-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+                    box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    
+      }
+       
+
+      
+       
+
+
+
+    .CompanyName:hover  {
+  /*      /* CSS3 Transform Effect */
+  	/*-webkit-transform: scale(1.2);*/     /* Safari & Chrome */
+  	/*-moz-transform: scale(1.2);*/        /* Firefox */
+  	/*-o-transform: scale(1.2);*/          /* Opera */
+
+      /* CSS3 Transition Effect */
+	/*-webkit-transition: all 0.45s ease-out;*/		/* Safari & Chrome */
+	/*-moz-transition: all 0.32s ease-out;*/		/* Firefox */
+	/*-o-transition: all 0.32s ease-out;*/		/* Opera */
+    }
+
+  
